@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#Copyright (C) 2004-2024 Murilo Gomes Julio
+#SPDX-License-Identifier: GPL-2.0-only
+
+#Mestre da Info
+#Site: https://www.mestredainfo.com.br
+
+export LD_LIBRARY_PATH="\${APPIMAGE_LIBRARY_PATH}:\${APPDIR}/usr/lib:\${LD_LIBRARY_PATH}"
+
+if [ "$1" = "sobre" ]; then
+	echo "MIServidor"
+	echo "Copyright (C) 2004-2024 Murilo Gomes Julio"
+	echo "License: GPL-2.0-only"
+    echo "Mestre da Info"
+    echo "Site: https://www.mestredainfo.com.br"
+elif [ "$1" = "php" ]; then
+	if [ "$2" = "versao" ]; then
+		${APPDIR}/usr/bin/php --version
+	elif [ "$2" = "arquivo" ]; then
+		${APPDIR}/usr/bin/php $3
+	elif [ "$2" = "codigo" ]; then
+		${APPDIR}/usr/bin/php -r "$3"
+	else
+		echo "Argumento não encontrado"
+	fi
+elif [ "$1" = "php-server" ]; then
+	${APPDIR}/usr/bin/php -S localhost:$2 -c $3/php/php.ini -t $3/sistema/ $3/core/router.php
+else
+	echo "Argumento não encontrado"
+fi

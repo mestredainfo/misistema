@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=miservidor
+Exec=miservidor %U
+Icon=miservidor
+Type=Application
+Terminal=true
+Categories=Development

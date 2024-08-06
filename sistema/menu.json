@@ -1,0 +1,12 @@
+{
+    "Sobre":
+    {
+        "Sobre o MISistema": {
+            "pagina": "sobre.php",
+            "atalho": "F2",
+            "novajanela": true,
+            "menu": false,
+            "redimensionar": false
+        }
+    }
+}

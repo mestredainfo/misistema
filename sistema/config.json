@@ -1,0 +1,19 @@
+{
+	"sistema": {
+		"nome": "MISistema",
+		"largura": 800,
+		"altura": 600,
+		"redimensionar": true,
+		"quadro": true,
+		"icon": "misistema.png",
+		"desativarAceleracaoHardware": true
+	},
+	"servidor": {
+		"perm": true,
+		"rotas": false
+	},
+	"dev": {
+		"menu": true,
+		"ferramentas": false
+	}
+}
